@@ -1,0 +1,26 @@
+buildscript {
+    dependencies {
+        classpath "com.android.tools.build:gradle:3.4.2"
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    lintOptions {
+        abortOnError false
+    }
+
+    defaultConfig {
+        applicationId "com.pivoto.facedetection"
+        minSdkVersion 24
+        targetSdkVersion 29
+        compileSdkVersion 29
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}
